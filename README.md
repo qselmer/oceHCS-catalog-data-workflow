@@ -1,6 +1,6 @@
 <img align="right" src="assets/images/logo.svg" alt="Humboldt Current environmental data workflow logo" width="110">
 
-### Humboldt Current Environmental Data<br>Workflow
+# Humboldt Current Environmental Data<br>Workflow
 
 Reproducible workflow for acquiring, quality-controlling, harmonizing, deriving, cataloguing, and reusing oceanographic and environmental data across the Humboldt Current System (HCS).
 
