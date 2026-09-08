@@ -1,0 +1,20 @@
+---
+title: "05 — Standardization and reusable cubes"
+format: html
+---
+
+## Goal
+
+Create reproducible reusable products from validated raw sources without destroying native information.
+
+## Rules
+
+- Raw files remain immutable.
+- Coordinate names, calendars, units, and dimension ordering may be standardized in `cin/interim/`.
+- Regridding is explicit, versioned, and justified; it never replaces native raw data.
+- Prefer sensible time-chunked NetCDF (for example annual files) for interoperability; use Zarr when size/access patterns justify it.
+- Avoid one-file-per-day fragmentation unless the provider or access pattern requires it.
+
+## Required provenance
+
+Every standardized artifact records source file checksum(s), processing function/version, target grid if any, temporal aggregation, and output checksum.
