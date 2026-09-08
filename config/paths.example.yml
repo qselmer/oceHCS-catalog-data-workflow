@@ -1,0 +1,13 @@
+# Copy this file to config/paths.local.yml and edit for your machine.
+# config/paths.local.yml is intentionally ignored by Git.
+
+ocean_data_root: "/path/to/oceHCS-data"
+
+paths:
+  cin_raw: "cin/raw"
+  cin_interim: "cin/interim"
+  cin_processed: "cin/processed"
+  cin_metadata: "cin/metadata"
+  cout_qc: "cout/qc"
+  cout_reports: "cout/reports"
+  cout_logs: "cout/logs"
