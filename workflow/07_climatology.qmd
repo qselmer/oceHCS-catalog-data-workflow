@@ -1,0 +1,22 @@
+---
+title: "07 — Climatologies and anomalies"
+format: html
+---
+
+## Goal
+
+Construct reusable climatologies/anomalies only after the underlying absolute variables and temporal coverage are validated.
+
+## Requirements
+
+- frozen baseline period;
+- explicit calendar/month/day treatment;
+- minimum temporal coverage rules;
+- source/product/version homogeneity assessment;
+- baseline sample-size diagnostics;
+- edge and missingness handling;
+- separate provenance for climatology and anomaly products.
+
+## Rule
+
+Absolute environmental products remain the canonical reusable layer. Climatologies and anomalies are derived products and must not overwrite them.
