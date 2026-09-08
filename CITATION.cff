@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "oceHCS-catalog-data-workflow: Reproducible environmental data workflow for the Humboldt Current System"
+type: software
+authors:
+  - family-names: Quispe-Salazar
+    given-names: Elmer
+message: "If you reuse this workflow or its catalog, please cite this repository and the original environmental data providers/products used in your analysis."
+license: MIT
+repository-code: "https://github.com/qselmer/oceHCS-catalog-data-workflow"
+url: "https://github.com/qselmer/oceHCS-catalog-data-workflow"
