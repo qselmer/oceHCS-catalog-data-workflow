@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "oceHCS catalog data workflow"
+  navbar:
+    left:
+      - href: workflow/00_contract.qmd
+        text: Contract
+      - href: workflow/01_domain.qmd
+        text: Domain
+      - href: workflow/02_product_registry.qmd
+        text: Products
+
+format:
+  html:
+    toc: true
+    code-fold: true
+    number-sections: true
+
+execute:
+  freeze: auto
