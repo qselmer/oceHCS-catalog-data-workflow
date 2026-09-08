@@ -1,0 +1,31 @@
+---
+title: "03 — Acquisition"
+format: html
+---
+
+## Goal
+
+Acquire only frozen provider/product/version × HCS-domain combinations using reproducible `oceancube` calls.
+
+## Required outputs per acquisition
+
+- exact request parameters;
+- provider/product/dataset IDs;
+- requested and returned spatial/temporal extents;
+- local raw path;
+- file size;
+- SHA-256 checksum;
+- acquisition timestamp;
+- provider response/status;
+- catalog update.
+
+## Rules
+
+- Write provider-native files only to `cin/raw/`.
+- Never overwrite an existing raw artifact silently.
+- Re-downloads with different content require a new provenance record.
+- Authentication credentials remain outside Git.
+
+## Status
+
+**STOP until `01_domain` and `02_product_registry` are frozen.**
