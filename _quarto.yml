@@ -3,15 +3,33 @@ project:
   output-dir: _site
 
 website:
-  title: "oceHCS catalog data workflow"
+  title: "Humboldt Current Environmental Data Workflow"
   navbar:
     left:
+      - href: index.qmd
+        text: Overview
       - href: workflow/00_contract.qmd
         text: Contract
       - href: workflow/01_domain.qmd
         text: Domain
       - href: workflow/02_product_registry.qmd
         text: Products
+      - text: Workflow
+        menu:
+          - href: workflow/03_download.qmd
+            text: Acquisition
+          - href: workflow/04_raw_qc.qmd
+            text: Raw QC
+          - href: workflow/05_standardize.qmd
+            text: Standardization
+          - href: workflow/06_derived_variables.qmd
+            text: Derived variables
+          - href: workflow/07_climatology.qmd
+            text: Climatology
+          - href: workflow/08_catalog.qmd
+            text: Catalog certification
+          - href: workflow/09_validation.qmd
+            text: Reuse validation
 
 format:
   html:
