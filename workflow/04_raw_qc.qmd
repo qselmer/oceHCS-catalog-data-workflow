@@ -1,0 +1,25 @@
+---
+title: "04 — Raw product QC"
+format: html
+---
+
+## Goal
+
+Audit each acquired environmental family before any harmonization or derivation.
+
+## Minimum checks
+
+- file readability and metadata consistency;
+- variable names, units, dimensions, CRS/grid;
+- returned spatial extent versus request;
+- temporal coverage and gaps;
+- native resolution;
+- fill values / NoData / masks;
+- physically plausible value ranges;
+- daily or native-time coverage maps;
+- missingness through time and across space;
+- source-version consistency.
+
+## Decision
+
+Every variable family receives `GO`, `REVIEW`, or `STOP`. No downstream processing is allowed from a `STOP` source artifact.
