@@ -1,4 +1,4 @@
-<img align="right" src="assets/images/logo.svg" alt="Humboldt Current environmental data workflow logo" width="110">
+<img align="right" src="assets/images/logo.png" alt="Humboldt Current environmental data workflow logo" width="110">
 
 # Humboldt Current Environmental Data<br>Workflow
 
