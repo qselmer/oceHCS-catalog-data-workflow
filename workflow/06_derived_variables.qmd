@@ -1,0 +1,29 @@
+---
+title: "06 — Derived environmental variables"
+format: html
+---
+
+## Goal
+
+Generate only scientifically justified derived variables from validated parent products.
+
+## Candidate derived families
+
+- EKE from currents;
+- wind speed from vector winds;
+- wind stress and alongshore stress;
+- Ekman/upwelling diagnostics;
+- oxycline depth/strength from vertical oxygen structure;
+- distance to coast from a frozen coastline;
+- climatological anomalies only when required by a downstream scientific question.
+
+## Rules
+
+- Record the complete dependency graph.
+- Record equations, constants, units, boundary/stencil behavior, and missing-data rules.
+- Parent-variable finite support does not automatically imply derived-variable finite support; derived coverage must be audited independently.
+- Never fill edge/stencil gaps silently.
+
+## Decision
+
+Every derived family receives its own `GO / REVIEW / STOP` gate.
