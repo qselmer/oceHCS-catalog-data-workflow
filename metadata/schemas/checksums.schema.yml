@@ -1,0 +1,19 @@
+table: catalog/checksums.csv
+primary_key: file_key
+columns:
+  - file_key
+  - relative_path
+  - algorithm
+  - checksum
+  - verified_at
+  - status
+required:
+  - file_key
+  - relative_path
+  - algorithm
+  - checksum
+  - status
+allowed_status:
+  - verified
+  - failed
+  - pending
