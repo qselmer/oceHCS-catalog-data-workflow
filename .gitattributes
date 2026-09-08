@@ -1,0 +1,2 @@
+# Infrastructure-only validation code should not determine the repository's primary language.
+tests/validate_repository.py linguist-vendored
