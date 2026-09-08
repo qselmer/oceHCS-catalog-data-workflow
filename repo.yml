@@ -1,0 +1,42 @@
+schema_version: 2
+
+repository:
+  owner: qselmer
+  name: oceHCS-environmental-data-workflow
+  title: Humboldt Current Environmental Data Workflow
+  type: type-workflow
+  status: active
+  visibility: public
+  version: 0.1.0
+  description: >
+    Reproducible workflow for acquisition, QC, harmonization, derivation,
+    cataloguing, and reuse of environmental data across the Humboldt
+    Current System.
+  software_engine:
+    repository: qselmer/oceancube
+  heavy_data_in_github: false
+  branding:
+    logo: assets/images/logo.svg
+  topics:
+    - type-workflow
+    - oceanography
+    - humboldt-current-system
+    - environmental-data
+    - ocean-data
+    - data-catalog
+    - data-provenance
+    - copernicus-marine
+    - era5
+    - netcdf
+    - zarr
+    - oceancube
+    - reproducible-research
+    - fisheries
+
+integration:
+  profile:
+    include: true
+  website:
+    include: true
+    section: projects
+  repository_url: https://github.com/qselmer/oceHCS-environmental-data-workflow
