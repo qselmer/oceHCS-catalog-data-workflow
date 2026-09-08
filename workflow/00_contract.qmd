@@ -1,0 +1,58 @@
+---
+title: "00 — Data governance contract"
+format: html
+---
+
+## Objective
+
+Freeze the governance rules for a reusable environmental data store for the Humboldt Current System before any bulk acquisition or processing.
+
+## Repository role
+
+This repository is a `type-methods-workflows` project. It does not store the heavy oceanographic data themselves. It stores code, product definitions, catalogs, checksums, provenance, QC outputs, and reproducible processing instructions.
+
+## External data lake
+
+The local/external data root is resolved from `config/paths.local.yml` and must follow:
+
+```text
+<oceHCS_data_root>/
+├── cin/
+│   ├── raw/
+│   ├── interim/
+│   ├── processed/
+│   └── metadata/
+└── cout/
+    ├── qc/
+    ├── reports/
+    └── logs/
+```
+
+## Non-negotiable rules
+
+1. `cin/raw/` is immutable.
+2. No NetCDF, GeoTIFF, Zarr, HDF5, or GRIB heavy data are committed to GitHub.
+3. Every acquired file must have provider, product ID, version, source URL, acquisition date, spatial/temporal extent, units, native resolution, and SHA-256 checksum recorded.
+4. Native source resolution is preserved. Regridding creates a new derived artifact and never replaces the raw source.
+5. Processing occurs one environmental family at a time.
+6. Each family must pass source QC and spatiotemporal support QC before the next family is started.
+7. A global coverage percentage is insufficient. Coverage must be assessed by relevant time blocks and spatial domains.
+8. Missing values are not silently imputed.
+9. Derived variables must record all upstream dependencies and their exact algorithms.
+10. All marine distances are reported in nautical miles (`nm`), with 1 nm = 1852 m.
+
+## GO / REVIEW / STOP
+
+Each processing step must end with one of:
+
+- `GO`: source, processing, coverage, and provenance satisfy the frozen contract;
+- `REVIEW`: result is usable only after an explicitly documented adjudication;
+- `STOP`: do not propagate the artifact downstream.
+
+## Software engine
+
+Reusable data operations should be implemented through `oceancube` whenever the package exposes an appropriate, tested function. Project-specific wrappers belong in this repository only when they configure or orchestrate those reusable functions.
+
+## Current status
+
+**REVIEW — infrastructure initialized; geographic domain and provider product IDs are not yet frozen. No bulk download should begin.**
