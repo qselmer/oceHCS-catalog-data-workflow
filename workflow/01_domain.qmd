@@ -1,0 +1,37 @@
+---
+title: "01 — Master HCS domain"
+format: html
+---
+
+## Goal
+
+Define and freeze the reusable Humboldt Current System master domain before any bulk environmental acquisition.
+
+## Required decisions
+
+- geographic bounding box in EPSG:4326;
+- scientific justification for the north/south/offshore limits;
+- whether the master domain is continuous or composed of named subdomains;
+- Peru and Chile coverage requirements;
+- static coastline and land-mask source;
+- prediction/extraction buffer policy;
+- relationship between the master HCS domain and project-specific subdomains.
+
+## Rules
+
+- Do not derive the master domain from species presence alone.
+- Do not download different spatial domains independently for each paper when one master product can be reused.
+- Preserve the provider-native grid in `cin/raw/`.
+- Project-specific cropping belongs downstream and must be reproducible from the master source.
+
+## Outputs
+
+- frozen `config/domain.yml`;
+- map of the master domain;
+- area and coordinate audit;
+- named subdomain registry if required;
+- `GO / REVIEW / STOP` decision.
+
+## Current status
+
+**REVIEW — coordinates intentionally unset.**
