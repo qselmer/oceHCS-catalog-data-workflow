@@ -1,0 +1,23 @@
+---
+title: "09 — Reuse validation"
+format: html
+---
+
+## Goal
+
+Validate that the certified HCS data store can be reused safely by downstream scientific projects.
+
+## Tests
+
+- reconstruct representative artifacts from raw + config + code;
+- verify checksums and catalog identities;
+- query Peru and Chile subdomains without modifying master raw data;
+- confirm expected spatial/temporal coverage;
+- confirm units and coordinate conventions;
+- validate derived-variable dependency chains;
+- test `oceancube` extraction/matching on known control points and dates;
+- verify machine portability using `config/paths.local.yml`.
+
+## Release gate
+
+A catalog/data-store version is reusable by paper repositories only after this step returns `GO` and the corresponding product/version records are frozen.
