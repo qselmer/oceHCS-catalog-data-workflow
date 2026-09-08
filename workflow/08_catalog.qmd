@@ -1,0 +1,25 @@
+---
+title: "08 — Catalog and provenance certification"
+format: html
+---
+
+## Goal
+
+Certify that every reusable HCS environmental artifact is discoverable and traceable without opening the binary data file.
+
+## Catalog outputs
+
+- `catalog/products.csv` — provider/product/version identity;
+- `catalog/variables.csv` — canonical variable definitions and dependencies;
+- `catalog/files.csv` — artifact-level identity, extent, size, processing level;
+- `catalog/coverage.csv` — spatial/temporal support and QC status;
+- `catalog/checksums.csv` — immutable checksum registry.
+
+## Certification checks
+
+- no duplicate file identities;
+- all heavy artifacts have checksums;
+- all processed artifacts trace to raw inputs;
+- all variables trace to a product or declared derivation;
+- status and version are explicit;
+- paths are relative to the external data root rather than machine-specific absolute paths.
