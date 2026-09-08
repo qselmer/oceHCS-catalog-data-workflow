@@ -1,0 +1,59 @@
+---
+title: "Humboldt Current Environmental Data Workflow"
+format: html
+---
+
+## Purpose
+
+This repository maintains the versioned scientific contract and catalog used to acquire, quality-control, harmonize, derive, certify, and reuse environmental data across the Humboldt Current System.
+
+The heavy data themselves are stored outside GitHub. This repository contains only the auditable definitions, lightweight catalogs, provenance records, quality-control decisions, and orchestration code required to reconstruct and reuse certified products.
+
+## Architecture
+
+```text
+providers
+  ↓
+external cin/raw
+  ↓
+frozen config + oceancube
+  ↓
+external cin/interim / cin/processed
+  ↓
+QC + provenance gates
+  ↓
+versioned catalog
+  ↓
+downstream scientific repositories
+```
+
+See [`docs/architecture.md`](docs/architecture.md) for the separation between `oceancube`, this workflow, the external data store, and paper-specific repositories.
+
+## Workflow status
+
+The repository is currently at **development release 0.1.0**. Infrastructure and governance are established, but the HCS master domain and provider product IDs remain intentionally unfrozen.
+
+No bulk acquisition should begin until:
+
+1. the master domain receives a documented `GO` decision;
+2. the first environmental family has a frozen provider/product/version contract;
+3. catalog and QC validation pass automatically.
+
+## Processing sequence
+
+1. Data governance contract
+2. Geographic domain
+3. Product registry
+4. Acquisition
+5. Raw source QC
+6. Standardization
+7. Derived variables
+8. Climatology / anomalies when justified
+9. Catalog and provenance certification
+10. Reuse validation
+
+Each stage terminates in `GO`, `REVIEW`, or `STOP` before downstream propagation.
+
+## Data catalog
+
+The lightweight catalog is maintained under `catalog/`. Its schemas are versioned under `metadata/schemas/`; the relationship between scientific configuration and certified catalog records is defined in [`docs/catalog-contract.md`](docs/catalog-contract.md).
