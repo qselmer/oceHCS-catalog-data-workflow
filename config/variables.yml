@@ -1,0 +1,62 @@
+variables:
+  sst:
+    status: candidate
+    temporal_target: daily
+    preserve_native: true
+  sss:
+    status: candidate
+    temporal_target: daily
+    preserve_native: true
+  mld:
+    status: candidate
+    temporal_target: daily
+    preserve_native: true
+  oxygen:
+    status: candidate
+    temporal_target: daily_if_available
+    preserve_native: true
+  oxycline:
+    status: derived_candidate
+    depends_on: oxygen
+  chlorophyll:
+    status: candidate
+    temporal_target: daily
+    preserve_native: true
+  npp:
+    status: candidate
+    temporal_target: native_or_daily
+    preserve_native: true
+  ssh_adt:
+    status: candidate
+    temporal_target: daily
+    preserve_native: true
+  currents:
+    status: candidate
+    temporal_target: daily
+    preserve_native: true
+  eke:
+    status: derived_candidate
+    depends_on: currents
+  wind:
+    status: candidate
+    temporal_target: daily
+    preserve_hourly_raw_when_available: true
+  wind_stress:
+    status: derived_candidate
+    depends_on: wind
+  ekman_upwelling:
+    status: derived_candidate
+    depends_on: wind_stress
+  bathymetry:
+    status: static_candidate
+    preserve_native: true
+  coastline:
+    status: static_candidate
+  distance_to_coast:
+    status: derived_candidate
+    depends_on: coastline
+
+rules:
+  process_one_variable_family_at_a_time: true
+  require_qc_before_next_variable: true
+  do_not_generate_unjustified_lags: true
