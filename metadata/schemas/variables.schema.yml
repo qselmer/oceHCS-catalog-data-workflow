@@ -1,0 +1,24 @@
+table: catalog/variables.csv
+primary_key: variable_key
+columns:
+  - variable_key
+  - product_key
+  - provider_variable
+  - standard_name
+  - units
+  - role
+  - temporal_target
+  - derived
+  - dependencies
+  - status
+  - notes
+required:
+  - variable_key
+  - standard_name
+  - role
+  - status
+allowed_status:
+  - candidate
+  - frozen
+  - deprecated
+  - review
