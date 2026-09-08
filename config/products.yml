@@ -1,0 +1,25 @@
+products:
+  status: DRAFT_REGISTRY
+  rules:
+    freeze_product_id_and_version_before_use: true
+    record_provider_license_and_access_date: true
+    keep_raw_files_immutable: true
+    preserve_native_resolution: true
+
+  candidate_providers:
+    copernicus_marine:
+      enabled: true
+      products: []
+    era5:
+      enabled: true
+      products: []
+    gebco:
+      enabled: true
+      products: []
+    other:
+      enabled: false
+      products: []
+
+notes:
+  - Product IDs are intentionally empty until each variable family is reviewed.
+  - Do not bulk-download before product/version and domain are frozen.
