@@ -1,0 +1,27 @@
+repository:
+  name: oceHCS-catalog-data-workflow
+  owner: qselmer
+  type: type-methods-workflows
+  visibility: public
+  description: >-
+    Reproducible workflow and catalog for acquisition, QC, harmonization,
+    derivation, and reuse of oceanographic data across the Humboldt Current
+    System using oceancube.
+  topics:
+    - type-methods-workflows
+    - oceanography
+    - humboldt-current-system
+    - peru
+    - chile
+    - ocean-data
+    - copernicus-marine
+    - era5
+    - netcdf
+    - zarr
+    - oceancube
+    - reproducible-research
+    - species-distribution-models
+    - fisheries
+  software_engine:
+    repository: qselmer/oceancube
+  heavy_data_in_github: false
