@@ -1,0 +1,58 @@
+---
+title: "02 — Environmental product registry"
+format: html
+---
+
+## Goal
+
+Select and freeze provider/product/version contracts for each environmental family before acquisition.
+
+## Candidate provider families
+
+- Copernicus Marine;
+- ERA5;
+- GEBCO;
+- additional products only when scientifically justified.
+
+## Required metadata per product
+
+- provider;
+- product ID;
+- dataset ID;
+- product version;
+- variable names and units;
+- native spatial resolution;
+- native temporal resolution;
+- vertical levels where relevant;
+- temporal coverage;
+- spatial coverage;
+- processing level;
+- licence/terms;
+- access endpoint;
+- acquisition date;
+- checksum policy.
+
+## Selection criteria
+
+1. ecological relevance;
+2. temporal coverage of the HCS research programme;
+3. spatial support for Peru and Chile;
+4. native resolution appropriate for the intended processes;
+5. continuity/version stability;
+6. reproducible programmatic access;
+7. transparent provenance and licensing.
+
+## Rule
+
+A newer or higher-resolution product is not automatically preferred if it shortens the historical record or produces inconsistent temporal support.
+
+## Outputs
+
+- updated `config/products.yml`;
+- populated `catalog/products.csv`;
+- provider/version rationale;
+- `GO / REVIEW / STOP` per environmental family.
+
+## Current status
+
+**REVIEW — provider families listed; exact product IDs not yet frozen.**
