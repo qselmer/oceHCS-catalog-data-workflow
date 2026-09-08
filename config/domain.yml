@@ -1,0 +1,22 @@
+domain:
+  id: HCS_MASTER
+  name: Humboldt Current System master environmental domain
+  status: DRAFT_NOT_FROZEN
+  crs: EPSG:4326
+  west: null
+  east: null
+  south: null
+  north: null
+
+units:
+  marine_distance: nm
+  nautical_mile_m: 1852
+
+rules:
+  freeze_before_bulk_download: true
+  preserve_native_source_resolution: true
+  never_define_domain_from_species_presence_only: true
+
+notes:
+  - Geographic bounds are intentionally unset until the scientific domain is reviewed.
+  - The master domain must support Peru and Chile and may later expose named subdomains for individual stocks or projects.
