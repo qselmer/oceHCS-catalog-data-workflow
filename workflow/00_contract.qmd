@@ -9,7 +9,7 @@ Freeze the governance rules for a reusable environmental data store for the Humb
 
 ## Repository role
 
-This repository is a `type-methods-workflows` project. It does not store the heavy oceanographic data themselves. It stores code, product definitions, catalogs, checksums, provenance, QC outputs, and reproducible processing instructions.
+This repository is a `type-workflow` project. It does not store heavy oceanographic data. It stores scientific configuration, product definitions, lightweight catalogs, checksums, provenance, QC decisions, and reproducible processing instructions.
 
 ## External data lake
 
@@ -32,7 +32,7 @@ The local/external data root is resolved from `config/paths.local.yml` and must 
 
 1. `cin/raw/` is immutable.
 2. No NetCDF, GeoTIFF, Zarr, HDF5, or GRIB heavy data are committed to GitHub.
-3. Every acquired file must have provider, product ID, version, source URL, acquisition date, spatial/temporal extent, units, native resolution, and SHA-256 checksum recorded.
+3. Every acquired artifact must record provider, product ID, version, source URL, acquisition date, spatial/temporal extent, units, native resolution, and SHA-256 checksum where applicable.
 4. Native source resolution is preserved. Regridding creates a new derived artifact and never replaces the raw source.
 5. Processing occurs one environmental family at a time.
 6. Each family must pass source QC and spatiotemporal support QC before the next family is started.
@@ -40,6 +40,8 @@ The local/external data root is resolved from `config/paths.local.yml` and must 
 8. Missing values are not silently imputed.
 9. Derived variables must record all upstream dependencies and their exact algorithms.
 10. All marine distances are reported in nautical miles (`nm`), with 1 nm = 1852 m.
+11. `config/*.yml` defines scientific intent and frozen processing decisions; `catalog/*.csv` records certified artifacts produced under those decisions.
+12. Catalog records must satisfy the versioned schemas under `metadata/schemas/` before a product can receive `GO` status.
 
 ## GO / REVIEW / STOP
 
