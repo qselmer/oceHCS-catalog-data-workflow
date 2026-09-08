@@ -1,0 +1,24 @@
+table: catalog/coverage.csv
+primary_key: coverage_key
+columns:
+  - coverage_key
+  - product_key
+  - variable_key
+  - domain_id
+  - start_date
+  - end_date
+  - spatial_coverage_fraction
+  - temporal_coverage_fraction
+  - missing_fraction
+  - qc_status
+  - notes
+required:
+  - coverage_key
+  - product_key
+  - variable_key
+  - domain_id
+  - qc_status
+allowed_status:
+  - GO
+  - REVIEW
+  - STOP
