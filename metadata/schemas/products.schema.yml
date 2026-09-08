@@ -1,0 +1,29 @@
+table: catalog/products.csv
+primary_key: product_key
+columns:
+  - product_key
+  - provider
+  - product_id
+  - dataset_id
+  - version
+  - variables
+  - native_spatial_resolution
+  - native_temporal_resolution
+  - vertical_support
+  - start_date
+  - end_date
+  - license
+  - access_url
+  - status
+  - notes
+required:
+  - product_key
+  - provider
+  - product_id
+  - version
+  - status
+allowed_status:
+  - candidate
+  - frozen
+  - deprecated
+  - review
