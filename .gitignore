@@ -1,0 +1,41 @@
+# Local configuration and credentials
+config/paths.local.yml
+.env
+.Renviron
+
+# Heavy oceanographic data
+*.nc
+*.nc4
+*.grib
+*.grb
+*.grib2
+*.tif
+*.tiff
+*.hdf
+*.h5
+*.hdf5
+*.zarr/
+*.zarr
+
+# Local data lake mounts / caches
+local/data/
+cache/
+tmp/
+
+# R
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# Quarto
+.quarto/
+_site/
+_freeze/
+
+# Logs generated locally
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
