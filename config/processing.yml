@@ -1,0 +1,30 @@
+processing:
+  software_engine:
+    package: oceancube
+    repository: https://github.com/qselmer/oceancube
+  storage:
+    raw_immutable: true
+    interim_rebuildable: true
+    processed_rebuildable: true
+  formats:
+    raw: provider_native
+    reusable_cube_primary: netcdf
+    reusable_cube_optional: zarr
+  temporal:
+    default_daily: true
+    retain_hourly_when_scientifically_needed: true
+  spatial:
+    preserve_native_grid: true
+    regrid_only_for_declared_products: true
+  provenance:
+    checksum_algorithm: sha256
+    record_source_url: true
+    record_product_id: true
+    record_product_version: true
+    record_download_date: true
+    record_processing_code_version: true
+  qc:
+    require_source_qc: true
+    require_spatiotemporal_coverage_qc: true
+    require_missingness_by_time_block: true
+    require_go_review_stop_decision: true
