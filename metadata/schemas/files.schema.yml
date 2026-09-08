@@ -1,0 +1,31 @@
+table: catalog/files.csv
+primary_key: file_key
+columns:
+  - file_key
+  - product_key
+  - relative_path
+  - file_name
+  - start_date
+  - end_date
+  - west
+  - east
+  - south
+  - north
+  - bytes
+  - sha256
+  - download_date
+  - processing_level
+  - status
+required:
+  - file_key
+  - product_key
+  - relative_path
+  - file_name
+  - processing_level
+  - status
+allowed_status:
+  - candidate
+  - frozen
+  - deprecated
+  - review
+  - failed
